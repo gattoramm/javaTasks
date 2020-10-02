@@ -1,7 +1,7 @@
 package Threads.ex11_1;
 /*
     Уnражнение 11.1
-    Расширение класса Thread .
+    Расширение класса Thread
  */
 class MyThread extends Thread {
     // Конструктор нового потока
