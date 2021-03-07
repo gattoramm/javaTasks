@@ -19,7 +19,7 @@ public class FOSBuffer{
 
         //создадим поток чтения байт из файла, в который будем записывать
         FileInputStream inputOut = new FileInputStream("d://result1.txt");
-        //определим количество байт в файле в который будм записывать
+        //определим количество байт в файле в который будем записывать
         int countOut = inputOut.available();
 
         System.out.println(input.available());
