@@ -9,7 +9,7 @@ public class FIS {
         long sum = 0;
 
         while(inputStream.available() > 0) { //пока остались непрочитанные байты
-            //System.out.println("av = " + inputStream.available());
+            System.out.println("av = " + inputStream.available());
             int data = inputStream.read();//прочитать очередной байт
 
             System.out.println("data = " + data);
