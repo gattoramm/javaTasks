@@ -2,6 +2,7 @@ package JUNIT.Udemi.practice1_assertEqual_assetNotEqual;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class assertEquals_assertNotEquals {
     int x = 2;

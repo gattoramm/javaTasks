@@ -1,7 +1,9 @@
 package JUNIT.Udemi.practice2_assertTrue_assertFalse;
 
+
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class assertNotEqualsBooleans {
     int x = 2;
