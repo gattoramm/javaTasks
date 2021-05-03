@@ -1,6 +1,6 @@
-package simple.Strings.Ex1;
+package Strings;
 
-public class Ex1 {
+public class task1 {
     public static void main(String[] args) {
         String f = "Lion.part1.end";
         String f2 = f.substring(0, f.indexOf('.'));

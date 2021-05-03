@@ -1,15 +1,13 @@
-package Threads.ex11_1;
-/*
-    Уnражнение 11.1
-    Расширение класса Thread
- */
+package Threads.task1;
+
 class MyThread extends Thread {
     // Конструктор нового потока
     MyThread(String name) {
         super(name);
     }
 
-    // Точка входа для потока\
+    // Точка входа для потока
+    @Override
     public void run() {
         System.out.println(getName() + " - запуск");
         try {
@@ -32,7 +30,7 @@ public class ExtendThread {
 
         mt.start();
 
-        for(int i=0; i<0;  i++) {
+        for(int i=0; i<50;  i++) {
             System.out.println(".");
             try {
                 Thread.sleep(100);
