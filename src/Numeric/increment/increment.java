@@ -1,4 +1,4 @@
-package simple;
+package Numeric.increment;
 
 public class increment {
     public static void main(String[] args) {
