@@ -1,4 +1,4 @@
-package Adapter.Ex1;
+package Adapter.task1;
 
 public class ListAdapter implements BetaList{
     private AlphaList list;
