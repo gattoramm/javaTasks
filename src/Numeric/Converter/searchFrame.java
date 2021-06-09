@@ -6,22 +6,28 @@ import java.util.ArrayList;
 
 public class searchFrame {
     public static void main(String[] args) throws IOException {
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\df_all_orig_bin.txt"));
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\df_all_orig_bin_frames.txt"))) {
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\df_example.txt"));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\df_example_frames.txt"))) {
             String line;
             ArrayList<String> list;
             String lineWithoutAddress;
             String address;
             while(bufferedReader.ready()) {
                 line = bufferedReader.readLine();
+                lineWithoutAddress = line.substring(3, line.length()-9);
                 address = line.substring(line.length()-9);
 
                 list = new ArrayList<>();
 
                 // пока не встретим 113 адрес, все данные (строки добавляем с список)
                 while(!address.equals("01001011"))
-                    list.add(line);
+                    list.add(lineWithoutAddress);
 
+                // инвертируем данные с контрольной суммы
+
+                for(String item : list) {
+
+                }
                 //int num1 = Integer.parseInt("11000", 2);
                 BigInteger hexToBin = new BigInteger(line,2);
 
