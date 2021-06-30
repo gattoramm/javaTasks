@@ -5,8 +5,8 @@ import java.math.BigInteger;
 
 public class HexBinDec {
     public static void main(String[] args) throws IOException {
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\df_one_frame.txt"));
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\df_one_frame_comment.txt"))) {
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\part2\\dfcosp2.txt"));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("c:\\WORKFLOW\\ARINKsystemNEW\\parseArinc\\df\\part2\\dfcosp2_comment.txt"))) {
             String line;
             StringBuilder stringBuilder;
             String dataResult;
@@ -22,7 +22,7 @@ public class HexBinDec {
 
                 String hexToDec = new BigInteger(line.substring(line.length()-2),16).toString(8);
 
-                dataResult = result.substring(3, result.length()-9);
+                dataResult = result.substring(1, result.length()-8);
 
                 // Вид - "HEX + Tab + BIN + DEC"
                 stringBuilder.append(line).append("\t").append(dataResult).append("\t").append(hexToDec);
